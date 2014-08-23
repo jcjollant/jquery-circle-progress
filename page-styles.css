@@ -4,6 +4,7 @@ body {
     padding-top: 40px;
     font: 15px/1.3 Arial, sans-serif;
     color: #fff;
+    text-align: center;
 }
 
 a {
@@ -11,7 +12,6 @@ a {
 }
 
 .new-tab-link {
-    /*display: inline-block;*/
     padding-right: 14px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3ggXDSIzCeRHfQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAA9SURBVBjTY2RAA/+XMvxHF2NkwAOwacCq4P9Shv8suFQzRiNsYUEXwKoJ2VhkNrIaJgYiAAs2N2BVRMirAD6JHi10MCdVAAAAAElFTkSuQmCC) no-repeat right center;
 }
@@ -19,14 +19,6 @@ a {
 .page-title {
     font: 400 40px/1.5 Open Sans, sans-serif;
     text-align: center;
-}
-
-.circles {
-    text-align: center;
-}
-
-.circles p {
-    margin: 40px 0;
 }
 
 .circle {
@@ -66,13 +58,21 @@ a {
     margin-top: 12px;
 }
 
-.minor-info {
-    font-size: 0.8em;
-    color: #aaa;
+p {
+    margin: 40px 0;
 }
 
-.download-button {
+.install code {
+    padding: 6px 12px;
     display: inline-block;
+    font: 13px/20px Courier New, Liberation Mono, monospase;
+    background-color: #333333;
+    border-radius: 4px;
+}
+
+.install a {
+    display: inline-block;
+    vertical-align: middle;
     padding: 6px 12px;
     line-height: 20px;
     background-color: #111;
@@ -82,14 +82,20 @@ a {
     transition: all .3s;
 }
 
-.download-button:hover {
+.install a:hover {
     background-color: #222;
 }
 
-code {
-    padding: 6px 12px;
-    display: inline-block;
-    font: 13px/20px Courier New, Liberation Mono, monospase;
-    background-color: #333333;
+.credits {
+    color: #aaa;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.credits img {
+    margin-left: 4px;
     border-radius: 4px;
+    vertical-align: middle;
 }
