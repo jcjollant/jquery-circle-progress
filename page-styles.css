@@ -23,8 +23,7 @@ a {
 
 .circle {
     width: 100px;
-    height: 100px;
-    margin: 6px;
+    margin: 6px 6px 20px;
     display: inline-block;
     position: relative;
     text-align: center;
@@ -37,12 +36,11 @@ a {
 
 .circle strong {
     position: absolute;
-    top: 50%;
+    top: 30px;
     left: 0;
     width: 100%;
     text-align: center;
     line-height: 40px;
-    margin-top: -20px;
     font-size: 30px;
 }
 
@@ -62,12 +60,18 @@ p {
     margin: 40px 0;
 }
 
+.install {
+    margin: 50px 0;
+}
+
 .install code {
     padding: 6px 12px;
     display: inline-block;
     font: 13px/20px Courier New, Liberation Mono, monospase;
     background-color: #333333;
     border-radius: 4px;
+    margin: 5px 0;
+    white-space: nowrap;
 }
 
 .install a {
@@ -79,6 +83,7 @@ p {
     color: #fff;
     border-radius: 3px;
     text-decoration: none;
+    margin: 5px 0;
     transition: all .3s;
 }
 
@@ -98,4 +103,10 @@ p {
     margin-left: 4px;
     border-radius: 4px;
     vertical-align: middle;
+}
+
+@media (max-height: 600px), (max-width: 480px) {
+    .credits {
+        position: inherit;
+    }
 }
