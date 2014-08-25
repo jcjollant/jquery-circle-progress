@@ -57,7 +57,7 @@ $('.forth.circle').circleProgress({
 $('.fifth.circle').circleProgress({
     value: 1,
     size: 60,
-    thickness: 25,
+    thickness: 20,
     fill: {
         color: 'lime', // fallback color when image is not loaded
         image: 'http://i.imgur.com/pT0i89v.png'
