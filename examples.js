@@ -58,7 +58,7 @@ $('.fifth.circle').circleProgress({
     value: 0.7,
     size: 60,
     thickness: 20,
-    reversedAnimation: true,
+    animationStartValue: 1.0,
     fill: {
         color: 'rgba(0, 0, 0, .1)', // fallback color when image is not loaded
         image: 'http://i.imgur.com/pT0i89v.png'
