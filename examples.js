@@ -62,5 +62,6 @@ $('.fifth.circle').circleProgress({
     fill: {
         color: 'rgba(0, 0, 0, .1)', // fallback color when image is not loaded
         image: 'http://i.imgur.com/pT0i89v.png'
-    }
+    },
+    reverse: true
 });
