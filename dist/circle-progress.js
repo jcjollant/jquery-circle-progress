@@ -83,7 +83,7 @@ License: MIT
         reverse: false,
 
         /**
-         * Arc line cap ('butt' (default), 'round' and 'square')
+         * Arc line cap ('butt', 'round' or 'square')
          * Read more: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D.lineCap
          * @type {string}
          */
