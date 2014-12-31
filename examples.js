@@ -26,12 +26,12 @@ $('.second.circle').circleProgress({
 
 /*
  * Example 3:
- *   - custom gradient
+ *   - very custom gradient
  *   - listening to `circle-animation-progress` event and display the dynamic change of the value: from 0 to 0.8
  */
 $('.third.circle').circleProgress({
-    value: 0.8,
-    fill: { gradient: ['#0681c4', '#07c6c1'] }
+    value: 0.75,
+    fill: { gradient: [['#0681c4', .5], ['#4ac5f8', .5]], gradientAngle: Math.PI / 4 }
 }).on('circle-animation-progress', function(event, progress, stepValue) {
     $(this).find('strong').text(String(stepValue.toFixed(2)).substr(1));
 });
@@ -40,10 +40,12 @@ $('.third.circle').circleProgress({
  * Example 4:
  *   - solid color fill
  *   - custom start angle
+ *   - custom line cap
  */
 $('.forth.circle').circleProgress({
     startAngle: -Math.PI / 4 * 3,
     value: .5,
+    lineCap: 'round',
     fill: { color: '#ffa500' }
 });
 
@@ -53,6 +55,8 @@ $('.forth.circle').circleProgress({
  *   - fallback color fill (when image is not loaded)
  *   - custom widget size (default is 100px)
  *   - custom circle thickness (default is 1/14 of the size)
+ *   - reverse drawing mode
+ *   - custom animation start value
  */
 $('.fifth.circle').circleProgress({
     value: 0.7,
