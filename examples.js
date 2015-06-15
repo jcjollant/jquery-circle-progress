@@ -41,13 +41,21 @@ $('.third.circle').circleProgress({
  *   - solid color fill
  *   - custom start angle
  *   - custom line cap
+ *   - dynamic value set
  */
-$('.forth.circle').circleProgress({
+var c4 = $('.forth.circle');
+
+c4.circleProgress({
     startAngle: -Math.PI / 4 * 3,
-    value: .5,
+    value: 0.5,
     lineCap: 'round',
     fill: { color: '#ffa500' }
 });
+
+// let's emulate dynamic value update
+setTimeout(function() { c4.circleProgress('value', 0.7); }, 1000);
+setTimeout(function() { c4.circleProgress('value', 1.0); }, 1100);
+setTimeout(function() { c4.circleProgress('value', 0.5); }, 2100);
 
 /*
  * Example 5:
@@ -57,15 +65,12 @@ $('.forth.circle').circleProgress({
  *   - custom circle thickness (default is 1/14 of the size)
  *   - reverse drawing mode
  *   - custom animation start value
+ *   - usage of "data-" attributes
  */
 $('.fifth.circle').circleProgress({
-    value: 0.7,
-    size: 60,
-    thickness: 20,
-    animationStartValue: 1.0,
-    fill: {
-        color: 'rgba(0, 0, 0, .1)', // fallback color when image is not loaded
-        image: 'http://i.imgur.com/pT0i89v.png'
-    },
-    reverse: true
+    value: 0.7
+    // all other config options were taken from "data-" attributes
+    // options passed in config object have higher priority than "data-" attributes
+    // "data-" attributes are taken into account only on init (not on update/redraw)
+    // "data-fill" (and other object options) should be in valid JSON format
 });
