@@ -315,13 +315,14 @@ License: MIT
          */
         drawAnimated: function(v) {
             var self = this,
-                el = this.el;
+                el = this.el,
+                canvas = $(this.canvas);
 
-            $(this.canvas).stop(true, false);
-
+            // stop previous animation before new "start" event is triggered
+            canvas.stop(true, false);
             el.trigger('circle-animation-start');
 
-            $(this.canvas)
+            canvas
                 .css({ animationProgress: 0 })
                 .animate({ animationProgress: 1 }, $.extend({}, this.animation, {
                     step: function (animationProgress) {
@@ -332,6 +333,7 @@ License: MIT
                 }))
                 .promise()
                 .always(function() {
+                    // trigger on both successful & failure animation end
                     el.trigger('circle-animation-end');
                 });
         },
